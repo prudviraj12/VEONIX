@@ -1,1 +1,4 @@
-console.log("hello world")
+const reddy=require("./seco");
+
+console.log("hello world",reddy);
+

@@ -1,0 +1,650 @@
+# VEONIX Specification
+Version: 1.0
+Status: Draft
+Project Type: Full Stack AI SaaS
+Owner: Prudvi Raj Reddy
+
+---
+
+# Overview
+
+VEONIX is an AI-powered academic learning and revision platform that helps students understand concepts instead of memorizing them.
+
+The platform transforms study material into interactive revision resources using AI, enabling students to revise faster and retain information more effectively.
+
+VEONIX focuses on conceptual learning, personalized revision, and AI-assisted study.
+
+---
+
+# Vision
+
+Build the best AI-powered study companion for students.
+
+Instead of replacing learning, VEONIX should simplify revision and improve conceptual understanding.
+
+---
+
+# Target Users
+
+Primary Users
+
+- Students
+
+Future Users
+
+- None
+
+---
+
+# Objectives
+
+- Help students revise efficiently
+- Improve conceptual understanding
+- Reduce time spent preparing notes
+- Generate revision material automatically
+- Provide personalized AI assistance
+- Organize study resources in one workspace
+
+---
+
+# Core Features
+
+## Authentication
+
+- Email & Password
+- JWT Authentication
+- Secure Password Hashing
+- Session Management
+
+---
+
+## Dashboard
+
+Students can
+
+- View recent activity
+- Access uploaded notes
+- Continue AI conversations
+- Open flashcards
+- Resume quizzes
+- View study statistics
+
+---
+
+## AI Chat
+
+The AI should
+
+- Explain concepts simply
+- Answer academic questions
+- Explain uploaded notes
+- Summarize chapters
+- Generate examples
+- Explain difficult topics
+
+---
+
+## Notes
+
+Students can
+
+- Create notes
+- Edit notes
+- Delete notes
+- Search notes
+- Organize notes
+
+---
+
+## File Upload
+
+Supported Formats
+
+- PDF
+- DOCX
+- PPTX
+- Images
+
+Maximum Size
+
+10 MB
+
+---
+
+## AI Processing
+
+After upload
+
+System should
+
+- Extract text
+- Clean content
+- Store processed content
+- Generate AI embeddings
+- Prepare for search
+
+---
+
+## Flashcards
+
+Students can
+
+- Generate AI flashcards
+- Create manual flashcards
+- Edit flashcards
+- Delete flashcards
+- Review flashcards
+
+---
+
+## Quiz Generator
+
+Generate
+
+- MCQs
+- True/False
+- Fill in the blanks
+- Short Answer
+
+Difficulty
+
+- Easy
+- Medium
+- Hard
+
+---
+
+## AI Revision
+
+Generate
+
+- Chapter summaries
+- Key points
+- Important formulas
+- Definitions
+- Revision sheets
+
+---
+
+## Search
+
+Search across
+
+- Notes
+- Flashcards
+- Uploaded files
+- AI conversations
+
+---
+
+## User Profile
+
+Students can
+
+- Update profile
+- Change password
+- View statistics
+- Delete account
+
+---
+
+# Functional Requirements
+
+Authentication
+
+- Register
+- Login
+- Logout
+- Password Reset
+
+Notes
+
+- CRUD
+
+Files
+
+- Upload
+- Delete
+- Preview
+
+AI
+
+- Chat
+- Summarize
+- Explain
+- Generate Flashcards
+- Generate Quiz
+
+Flashcards
+
+- CRUD
+- Review
+
+Quiz
+
+- Generate
+- Attempt
+- View Score
+
+---
+
+# Non Functional Requirements
+
+Performance
+
+- Fast response times
+- Scalable architecture
+- Secure authentication
+
+Security
+
+- JWT
+- Password hashing
+- Input validation
+- Rate limiting
+
+Reliability
+
+- Automatic backups
+- Error logging
+
+---
+
+# Technology Stack
+
+Frontend
+
+- React
+- Vite
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
+
+Backend
+
+- Express.js
+- TypeScript
+
+Database
+
+- PostgreSQL
+
+ORM
+
+- Prisma
+
+Authentication
+
+- JWT
+
+Caching
+
+- Redis
+
+Storage
+
+Development
+
+Local Storage
+
+Production
+
+Cloudflare R2
+
+Containerization
+
+Docker
+
+Reverse Proxy
+
+Nginx
+
+Deployment
+
+AWS
+
+CI/CD
+
+GitHub Actions
+
+Testing
+
+Vitest
+
+---
+
+# Project Structure
+
+```
+veonix/
+
+client/
+
+server/
+
+database/
+
+docker/
+
+docs/
+
+uploads/
+
+docker-compose.yml
+
+README.md
+```
+
+---
+
+# Folder Structure
+
+```
+client/
+
+src/
+
+components/
+
+pages/
+
+layouts/
+
+hooks/
+
+services/
+
+lib/
+
+types/
+
+styles/
+
+assets/
+
+public/
+```
+
+```
+server/
+
+src/
+
+controllers/
+
+routes/
+
+middleware/
+
+services/
+
+repositories/
+
+models/
+
+prisma/
+
+utils/
+
+config/
+
+types/
+
+validators/
+```
+
+---
+
+# Database
+
+Users
+
+Notes
+
+Flashcards
+
+Quizzes
+
+Files
+
+Chat History
+
+Sessions
+
+Statistics
+
+---
+
+# API
+
+Authentication
+
+POST /auth/register
+
+POST /auth/login
+
+POST /auth/logout
+
+User
+
+GET /users/me
+
+PATCH /users/me
+
+DELETE /users/me
+
+Notes
+
+GET /notes
+
+POST /notes
+
+PATCH /notes/:id
+
+DELETE /notes/:id
+
+Files
+
+POST /files/upload
+
+GET /files
+
+DELETE /files/:id
+
+AI
+
+POST /ai/chat
+
+POST /ai/summarize
+
+POST /ai/flashcards
+
+POST /ai/quiz
+
+Flashcards
+
+GET /flashcards
+
+POST /flashcards
+
+PATCH /flashcards/:id
+
+DELETE /flashcards/:id
+
+---
+
+# AI Features
+
+Concept Explanation
+
+Topic Summarization
+
+Question Answering
+
+Flashcard Generation
+
+Quiz Generation
+
+Revision Sheets
+
+Key Points
+
+Definitions
+
+Examples
+
+---
+
+# Security
+
+JWT Authentication
+
+Password Hashing
+
+Input Validation
+
+Helmet
+
+CORS
+
+Rate Limiting
+
+Environment Variables
+
+---
+
+# Docker
+
+Containers
+
+Frontend
+
+Backend
+
+PostgreSQL
+
+Redis
+
+Nginx
+
+---
+
+# Environment Variables
+
+DATABASE_URL
+
+JWT_SECRET
+
+REDIS_URL
+
+OPENAI_API_KEY
+
+R2_ACCESS_KEY
+
+R2_SECRET_KEY
+
+R2_BUCKET
+
+PORT
+
+NODE_ENV
+
+---
+
+# Git Workflow
+
+main
+
+development
+
+feature/*
+
+bugfix/*
+
+hotfix/*
+
+---
+
+# Coding Standards
+
+TypeScript
+
+ESLint
+
+Prettier
+
+Conventional Commits
+
+---
+
+# Testing
+
+Vitest
+
+Unit Tests
+
+Integration Tests
+
+API Tests
+
+---
+
+# Deployment Pipeline
+
+Developer Push
+
+↓
+
+GitHub
+
+↓
+
+GitHub Actions
+
+↓
+
+Build
+
+↓
+
+Run Tests
+
+↓
+
+Docker Build
+
+↓
+
+Deploy
+
+↓
+
+AWS
+
+---
+
+# Future Scope
+
+Improve AI models
+
+Support larger documents
+
+Enhanced revision analytics
+
+More AI-powered learning tools
+
+---
+
+# Success Criteria
+
+Students should be able to
+
+- Register
+- Upload notes
+- Chat with AI
+- Generate flashcards
+- Generate quizzes
+- Revise concepts
+- Track study progress
+
+All core features should work securely, reliably, and with a responsive user experience.

@@ -1,0 +1,19 @@
+{
+  "name": "veonix",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI-powered academic learning and revision platform",
+  "workspaces": ["apps/*", "packages/*"],
+  "engines": { "node": ">=22.0.0", "npm": ">=10.0.0" },
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=@veonix/api\" \"npm run dev --workspace=@veonix/web\"",
+    "build": "npm run build --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "db:generate": "npm run prisma:generate --workspace=@veonix/api",
+    "db:migrate": "npm run prisma:migrate --workspace=@veonix/api",
+    "format": "prettier --write ."
+  },
+  "devDependencies": { "concurrently": "^9.1.2", "prettier": "^3.5.3" }
+}

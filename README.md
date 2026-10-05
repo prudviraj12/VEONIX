@@ -6,7 +6,7 @@ VEONIX is an AI-powered academic learning and revision platform. This repository
 
 1. Copy `.env.example` to `.env`, `apps/api/.env.example` to `apps/api/.env`, and `apps/web/.env.example` to `apps/web/.env`.
 2. Run `docker compose up -d postgres redis`.
-3. Run `npm install`, `npm run db:generate`, `npm run db:migrate`, then `npm run dev`.
+3. Run `npm ci`, `npm run db:generate`, `npm run db:migrate`, then `npm run dev`.
 
 For the fully containerized development environment, use `docker compose up --build`.
 
